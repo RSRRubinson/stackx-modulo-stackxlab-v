@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Desafio StackxLab - Projeto Calculadora</title>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+        <link
+            rel="shortcut icon"
+            href="./assets/img/calculator-solid.svg"
+            type="image/x-icon" />
+
+        <link rel="stylesheet" href="./assets/css/style.css" />
+
+        <script type="module" src="./assets/js/script.js" defer></script>
+    </head>
+    <body>
+        <div class="class-container">
+            <div id="id-calculator">
+                <h3>Calculadora</h3>
+
+                <div id="id-operations">
+                    <div id="id-previous-operation"
+                        data-previous-operation></div>
+                    <div id="id-current-operation"
+                        data-current-operation></div>
+                </div>
+
+                <div id="id-buttons-container">
+                    <button data-power id="id-on">
+                        <i class="bi bi-power"></i>
+                    </button>
+
+                    <button data-all-clear>CE</button>
+                    <button data-delete>DEL</button>
+                    <button data-operator id="id-division">/</button>
+
+                    <button data-number class="class-number">7</button>
+                    <button data-number class="class-number">8</button>
+                    <button data-number class="class-number">9</button>
+
+                    <button data-operator>*</button>
+
+                    <button data-number class="class-number">4</button>
+                    <button data-number class="class-number">5</button>
+                    <button data-number class="class-number">6</button>
+
+                    <button data-operator>-</button>
+
+                    <button data-number class="class-number">1</button>
+                    <button data-number class="class-number">2</button>
+                    <button data-number class="class-number">3</button>
+
+                    <button data-operator>+</button>
+
+                    <button data-number class="class-number"
+                        id="id-dot">.</button>
+                    <button data-number class="class-number">0</button>
+                    <button data-equals id="id-equal-btn">=</button>
+                </div>
+            </div>
+
+            <div data-results-history-container
+                class="class-results-history-container class-hide">
+                <header>
+                    <h1>Histórico</h1>
+                </header>
+                <div data-result-history-content
+                    class="class-result-history-content">
+
+                </div>
+            </div>
+        </div>
+
+        <template data-template>
+            <div class="class-result-content" data-result-content>
+                <div data-result>
+                    <label>
+                        <i class="bi bi-calendar3"></i>
+
+                        <input
+                            disabled
+                            type="text"
+                            value="00/00/0000"
+                            style="background-color: #fff"
+                            data-result-date />
+                    </label>
+
+                    <label>
+                        <i class="bi bi-alarm"></i>
+                        <input
+                            disabled
+                            type="text"
+                            value="00:00:00"
+                            style="background-color: #fff"
+                            data-result-time />
+                    </label>
+
+                    <label>
+                        <i
+                            class="bi bi-calculator-fill"
+                            style="cursor: help"></i>
+
+                        <input
+                            readonly
+                            type="text"
+                            value="2 + 4 = 4"
+                            class="class-result"
+                            style="cursor: help; background-color: #ddd"
+                            data-result-operation />
+                    </label>
+
+                    <label>
+                        <i class="bi bi-trash3" style="cursor: pointer"></i>
+
+                        <input
+                            readonly
+                            type="text"
+                            value="Deletar"
+                            class="class-delete"
+                            style="cursor: pointer"
+                            data-result-remove />
+                    </label>
+                </div>
+            </div>
+        </template>
+
+        <a
+            href="https://github.com/leojosants"
+            class="class-github"
+            target="_blank"
+            rel="external">
+            <i class="bi bi-github"></i>
+        </a>
+    </body>
+</html>
